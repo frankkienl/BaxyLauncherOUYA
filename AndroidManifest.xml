@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="nl.frankkie.baxy"
+          android:versionCode="9003"
+          android:versionName="1.0.7-beta">
+
+    <uses-sdk
+            android:minSdkVersion="16"
+            android:targetSdkVersion="16"/>
+
+    <!-- Backgrounds and Thumbnails //-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- Turn off and Discover //-->
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER"/>
+    <!-- Analytics //-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Get list of Running Apps //-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- Kill running apps //-->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <!-- Wallpapers //-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <!-- get email for feedback //-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!--
+    This will only be granted to system apps
+    <uses-permission android:name="android.permission.BIND_WALLPAPER" />
+    //-->
+    <!--
+    http://developer.android.com/guide/topics/appwidgets/host.html
+    <uses-permission android:name="android.permission.BIND_APPWIDGET" />
+    //-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name=".StartActivity"
+                android:theme="@style/WallpapaerStyle"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="tv.ouya.intent.category.APP"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:theme="@style/WallpapaerStyle"/>
+        <activity
+                android:name=".BackgroundActivity"
+                android:label="Static Background"
+                android:theme="@style/WallpapaerStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".RunningAppsActivity"
+                android:theme="@style/WallpapaerStyle"/>
+        <activity
+                android:name=".SettingsActivity"
+                android:theme="@style/WallpapaerStyle"/>
+        <activity
+                android:name=".LogoActivity"
+                android:theme="@style/WallpapaerStyle"/>
+        <activity
+            android:name=".FeedbackActivity"
+            android:theme="@style/WallpapaerStyle" />
+        <activity
+                android:name=".BackgroundMusicActivity"
+                android:theme="@style/WallpapaerStyle" />
+        <activity
+                android:name=".WebserverActivity"
+                android:theme="@style/WallpapaerStyle" />
+
+        <service
+                android:name=".BackgroundMusicService"
+                />
+    </application>
+
+</manifest>

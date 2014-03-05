@@ -43,7 +43,7 @@
                     android:textColor="#FFF"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:text="Please put background files in: /sdcard/FrankkieOuyaLauncher/backgrounds/"
+                    android:text="Please put background files in: /sdcard/BAXY/backgrounds/"
                     />
             </LinearLayout>
 

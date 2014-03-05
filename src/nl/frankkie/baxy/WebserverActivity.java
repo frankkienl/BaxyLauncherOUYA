@@ -61,11 +61,11 @@ public class WebserverActivity extends Activity {
     }
 
     public void putFiles() {
-        File webDir = new File("/sdcard/FrankkieOuyaLauncher/web/");
+        File webDir = new File("/sdcard/BAXY/web/");
         if (!webDir.exists()) {
             webDir.mkdirs();
-            File webJsDir = new File("/sdcard/FrankkieOuyaLauncher/web/js/");
-            File webCssDir = new File("/sdcard/FrankkieOuyaLauncher/web/css/");
+            File webJsDir = new File("/sdcard/BAXY/web/js/");
+            File webCssDir = new File("/sdcard/BAXY/web/css/");
             webJsDir.mkdirs();
             webCssDir.mkdirs();
             try {
@@ -76,7 +76,7 @@ public class WebserverActivity extends Activity {
                 for (String s : list) {
                     InputStream in = asm.open("web/js/" + s);
                     try {
-                        Util.copyAsset(in, new File("/sdcard/FrankkieOuyaLauncher/web/js/" + s));
+                        Util.copyAsset(in, new File("/sdcard/BAXY/web/js/" + s));
                     } catch (Exception e) {
                         //
                         e.printStackTrace();
@@ -86,7 +86,7 @@ public class WebserverActivity extends Activity {
                 for (String s : list2) {
                     InputStream in = asm.open("web/css/" + s);
                     try {
-                        Util.copyAsset(in, new File("/sdcard/FrankkieOuyaLauncher/web/css/" + s));
+                        Util.copyAsset(in, new File("/sdcard/BAXY/web/css/" + s));
                     } catch (Exception e) {
                         //
                         e.printStackTrace();

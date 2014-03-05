@@ -39,10 +39,10 @@ public class Updater {
     private static Updater instance;
     Context context;
     Handler handler = new Handler();
-    public static final String apkName = "FrankkieOuyaLauncher.apk";
+    public static final String apkName = "BAXY.apk";
     public static final String versionJsonUrl = "https://raw.github.com/frankkienl/OuyaLauncherFrankkieNL/master/version.json";
-    public static final String apkUrl = "https://raw.github.com/frankkienl/OuyaLauncherFrankkieNL/master/FrankkieOuyaLauncher/FrankkieOuyaLauncher.apk";
-    public static final String apkUrlBeta = "https://raw.github.com/frankkienl/OuyaLauncherFrankkieNL/master/FrankkieOuyaLauncher/FrankkieOuyaLauncherBETA.apk";
+    public static final String apkUrl = "https://raw.github.com/frankkienl/OuyaLauncherFrankkieNL/master/BAXY/BAXY.apk";
+    public static final String apkUrlBeta = "https://raw.github.com/frankkienl/OuyaLauncherFrankkieNL/master/BAXY/BAXYBETA.apk";
 
     public void startUpdateCheck() {
         UpdateCheckAsyncTask task = new UpdateCheckAsyncTask();

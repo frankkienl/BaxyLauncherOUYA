@@ -181,7 +181,7 @@ public class StartActivity extends Activity {
             prefs.edit().putBoolean("isFirstRun", false).commit();
             Util.getBackground(this); //place background files on SD
             SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-            String path = defaultSharedPreferences.getString("backgroundFile", "/sdcard/FrankkieOuyaLauncher/backgrounds/default.png");
+            String path = defaultSharedPreferences.getString("backgroundFile", "/sdcard/BAXY/backgrounds/default.png");
             try {
                 FileInputStream fis = new FileInputStream(new File(path));
                 setWallpaper(fis);

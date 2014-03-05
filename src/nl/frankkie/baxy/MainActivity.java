@@ -839,11 +839,11 @@ public class MainActivity extends Activity {
             // Scale it //http://stackoverflow.com/questions/4609456/android-set-drawable-size-programatically
             BitmapDrawable d = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, Util.THUMBNAIL_SMALL_WIDTH, Util.THUMBNAIL_SMALL_HEIGHT, true));
             //Save to file //http://stackoverflow.com/questions/649154/save-bitmap-to-location
-            FileOutputStream out = new FileOutputStream("/sdcard/FrankkieOuyaLauncher/thumbnails/" + packageName + ".png");
+            FileOutputStream out = new FileOutputStream("/sdcard/BAXY/thumbnails/" + packageName + ".png");
             d.getBitmap().compress(Bitmap.CompressFormat.PNG, 90, out);
             Runtime.getRuntime().gc(); //important
         } catch (Exception e) {
-            Log.e("FrankkieOuyaLauncher", "ERROR", e);
+            Log.e("BAXY", "ERROR", e);
         }
     }
 
@@ -856,7 +856,7 @@ public class MainActivity extends Activity {
             if (identifier != 0) {
                 InputStream in = resources.openRawResource(identifier);
                 //Save to file //http://stackoverflow.com/questions/649154/save-bitmap-to-location
-                FileOutputStream out = new FileOutputStream("/sdcard/FrankkieOuyaLauncher/animations/" + packageName + ".gif");
+                FileOutputStream out = new FileOutputStream("/sdcard/BAXY/animations/" + packageName + ".gif");
                 byte[] buff = new byte[1024];
                 int read = 0;
                 try {
@@ -867,12 +867,12 @@ public class MainActivity extends Activity {
                     in.close();
                     out.close();
                 }
-                info.animationPath = "/sdcard/FrankkieOuyaLauncher/animations/" + packageName + ".gif";
+                info.animationPath = "/sdcard/BAXY/animations/" + packageName + ".gif";
             }
             Runtime.getRuntime().gc(); //important
         } catch (Exception e) {
             info.animationPath = "";
-            Log.e("FrankkieOuyaLauncher", "ERROR", e);
+            Log.e("BAXY", "ERROR", e);
         }
     }
 
@@ -889,11 +889,11 @@ public class MainActivity extends Activity {
             // Scale it //http://stackoverflow.com/questions/4609456/android-set-drawable-size-programatically
             BitmapDrawable d = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, Util.THUMBNAIL_SMALL_WIDTH, Util.THUMBNAIL_SMALL_HEIGHT, true));
             //Save to file //http://stackoverflow.com/questions/649154/save-bitmap-to-location
-            FileOutputStream out = new FileOutputStream("/sdcard/FrankkieOuyaLauncher/thumbnails/" + packageName + ".png");
+            FileOutputStream out = new FileOutputStream("/sdcard/BAXY/thumbnails/" + packageName + ".png");
             d.getBitmap().compress(Bitmap.CompressFormat.PNG, 90, out);
             Runtime.getRuntime().gc(); //important
         } catch (Exception e) {
-            Log.e("FrankkieOuyaLauncher", "ERROR", e);
+            Log.e("BAXY", "ERROR", e);
         }
     }
 
@@ -956,13 +956,13 @@ public class MainActivity extends Activity {
                         | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
         //Image
         if (appInfo.isOUYA()) {
-            File thumbFile = new File("/sdcard/FrankkieOuyaLauncher/thumbnails/" + appInfo.packageName + ".png");
+            File thumbFile = new File("/sdcard/BAXY/thumbnails/" + appInfo.packageName + ".png");
             if (thumbFile.exists()) {
                 appInfo.icon = new BitmapDrawable(BitmapFactory.decodeFile(thumbFile.getPath()));
             } else {
                 getIconImageOUYA(appInfo);
             }
-            File animationFile = new File("/sdcard/FrankkieOuyaLauncher/animations/" + appInfo.packageName + ".gif");
+            File animationFile = new File("/sdcard/BAXY/animations/" + appInfo.packageName + ".gif");
             if (animationFile.exists()) {
                 appInfo.animationPath = animationFile.getPath();
             } else {

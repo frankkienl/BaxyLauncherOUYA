@@ -107,17 +107,17 @@ public class LogoActivity extends Activity {
     public class LogosLoaderAsynTask extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... voids) {
-            File dir = new File("/sdcard/FrankkieOuyaLauncher/logos/");
+            File dir = new File("/sdcard/BAXY/logos/");
             String[] list = dir.list();
             logos.clear();
             SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(LogoActivity.this);
-            String selectedLogoPath = defaultSharedPreferences.getString("logoFile", "/sdcard/FrankkieOuyaLauncher/logos/logo_baxy_white_shadowite_shadow.png");
+            String selectedLogoPath = defaultSharedPreferences.getString("logoFile", "/sdcard/BAXY/logos/logo_baxy_white_shadowite_shadow.png");
             for (String s : list) {
                 if (s.equals(".nomedia")){
                     continue;
                 }
                 MyLogo logo = new MyLogo();
-                File file = new File("/sdcard/FrankkieOuyaLauncher/logos/" + s);
+                File file = new File("/sdcard/BAXY/logos/" + s);
                 if (!file.exists() || !file.canRead()) {
                     continue;
                 }

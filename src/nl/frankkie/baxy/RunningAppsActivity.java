@@ -92,7 +92,7 @@ public class RunningAppsActivity extends Activity {
         tv_packagename.setText(packageName);
         //
         ImageView img = (ImageView) layout.findViewById(R.id.item_image);
-        File thumbFile = new File("/sdcard/FrankkieOuyaLauncher/thumbnails/" + packageName + ".png");
+        File thumbFile = new File("/sdcard/BAXY/thumbnails/" + packageName + ".png");
         if (thumbFile.exists()) {
             img.setImageDrawable(new BitmapDrawable(BitmapFactory.decodeFile(thumbFile.getPath())));
         } else {
@@ -176,12 +176,12 @@ public class RunningAppsActivity extends Activity {
             // Scale it //http://stackoverflow.com/questions/4609456/android-set-drawable-size-programatically
             BitmapDrawable d = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, Util.THUMBNAIL_SMALL_WIDTH, Util.THUMBNAIL_SMALL_HEIGHT, true));
             //Save to file //http://stackoverflow.com/questions/649154/save-bitmap-to-location
-            FileOutputStream out = new FileOutputStream("/sdcard/FrankkieOuyaLauncher/thumbnails/" + packageName + ".png");
+            FileOutputStream out = new FileOutputStream("/sdcard/BAXY/thumbnails/" + packageName + ".png");
             d.getBitmap().compress(Bitmap.CompressFormat.PNG, 90, out);
             Runtime.getRuntime().gc(); //important
             return drawable;
         } catch (Exception e) {
-            Log.e("FrankkieOuyaLauncher", "ERROR", e);
+            Log.e("BAXY", "ERROR", e);
             return null;
         }
     }

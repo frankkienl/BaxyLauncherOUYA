@@ -161,17 +161,17 @@ public class BackgroundActivity extends Activity {
     public class BackgroundsLoaderAsyncTask extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... voids) {
-            File dir = new File("/sdcard/FrankkieOuyaLauncher/backgrounds/");
+            File dir = new File("/sdcard/BAXY/backgrounds/");
             String[] list = dir.list();
             backgrounds.clear();
             SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(BackgroundActivity.this);
-            String selectedBackgroundPath = defaultSharedPreferences.getString("backgroundFile", "/sdcard/FrankkieOuyaLauncher/backgrounds/default.png");
+            String selectedBackgroundPath = defaultSharedPreferences.getString("backgroundFile", "/sdcard/BAXY/backgrounds/default.png");
             for (String s : list) {
                 if (s.equals(".nomedia")) {
                     continue;
                 }
                 MyBackground background = new MyBackground();
-                File file = new File("/sdcard/FrankkieOuyaLauncher/backgrounds/" + s);
+                File file = new File("/sdcard/BAXY/backgrounds/" + s);
                 if (!file.exists() || !file.canRead()) {
                     continue;
                 }

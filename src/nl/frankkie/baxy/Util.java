@@ -103,22 +103,22 @@ public class Util {
     public static Drawable getBackground(Context c) {
         //Check if default Background exists
         //Background file should always exist!
-        File defaultFile = new File("/sdcard/FrankkieOuyaLauncher/backgrounds/default.png");
+        File defaultFile = new File("/sdcard/BAXY/backgrounds/default.png");
         if (!defaultFile.exists()) {
             //make that file
-            File folder = new File("/sdcard/FrankkieOuyaLauncher/backgrounds/");
+            File folder = new File("/sdcard/BAXY/backgrounds/");
             folder.mkdirs();
             try {
                 //add .nomedia
-                File noMedia = new File("/sdcard/FrankkieOuyaLauncher/backgrounds/.nomedia");
+                File noMedia = new File("/sdcard/BAXY/backgrounds/.nomedia");
                 noMedia.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                copyResourceToFile(c, R.raw.bg_color, new File("/sdcard/FrankkieOuyaLauncher/backgrounds/default.png"));
-                copyResourceToFile(c, R.raw.ouya_background, new File("/sdcard/FrankkieOuyaLauncher/backgrounds/ouya_controller.png"));
-                copyResourceToFile(c, R.raw.ouya_console_wallpaper, new File("/sdcard/FrankkieOuyaLauncher/backgrounds/ouya_console.png"));
+                copyResourceToFile(c, R.raw.bg_color, new File("/sdcard/BAXY/backgrounds/default.png"));
+                copyResourceToFile(c, R.raw.ouya_background, new File("/sdcard/BAXY/backgrounds/ouya_controller.png"));
+                copyResourceToFile(c, R.raw.ouya_console_wallpaper, new File("/sdcard/BAXY/backgrounds/ouya_console.png"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -128,12 +128,12 @@ public class Util {
 
         //Check preference
         SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(c);
-        String fileString = defaultSharedPreferences.getString("backgroundFile", "/sdcard/FrankkieOuyaLauncher/backgrounds/default.png");
+        String fileString = defaultSharedPreferences.getString("backgroundFile", "/sdcard/BAXY/backgrounds/default.png");
         File file = new File(fileString);
         if (!file.exists()) {
             //The selected custom background does not exist..
             //Return Default !
-            Log.e("FrankkieOuyaLauncher", "Selected Background does not exist !! (return default)");
+            Log.e("BAXY", "Selected Background does not exist !! (return default)");
             return c.getResources().getDrawable(R.drawable.bg_color);
         }
         //File does exist
@@ -171,25 +171,25 @@ public class Util {
     public static Drawable getLogoOLD(Context c) {
         //Check if default Background exists
         //Background file should always exist!
-        File defaultFile = new File("/sdcard/FrankkieOuyaLauncher/logos/logo_default.png");
+        File defaultFile = new File("/sdcard/BAXY/logos/logo_default.png");
         if (!defaultFile.exists()) {
             //make that file
-            File folder = new File("/sdcard/FrankkieOuyaLauncher/logos/");
+            File folder = new File("/sdcard/BAXY/logos/");
             folder.mkdirs();
             try {
                 //add .nomedia
-                File noMedia = new File("/sdcard/FrankkieOuyaLauncher/logos/.nomedia");
+                File noMedia = new File("/sdcard/BAXY/logos/.nomedia");
                 noMedia.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                copyResourceToFile(c, R.raw.logo_default, new File("/sdcard/FrankkieOuyaLauncher/logos/logo_default.png"));
-//                copyResourceToFile(c, R.raw.logo_baxy_white_shadow, new File("/sdcard/FrankkieOuyaLauncher/logos/logo_baxy_white_shadow.pngshadow.png"));
-                //copyResourceToFile(c, R.raw.logo_baxy_white, new File("/sdcard/FrankkieOuyaLauncher/logos/logo_baxy_white.png"));
-                //copyResourceToFile(c, R.raw.logo_ouya_black, new File("/sdcard/FrankkieOuyaLauncher/logos/logo_ouya_black.png"));
-                //copyResourceToFile(c, R.raw.logo_ouya_red, new File("/sdcard/FrankkieOuyaLauncher/logos/logo_ouya_red.png"));
-                //copyResourceToFile(c, R.raw.logo_ouya_white, new File("/sdcard/FrankkieOuyaLauncher/logos/logo_ouya_white.png"));
+                copyResourceToFile(c, R.raw.logo_default, new File("/sdcard/BAXY/logos/logo_default.png"));
+//                copyResourceToFile(c, R.raw.logo_baxy_white_shadow, new File("/sdcard/BAXY/logos/logo_baxy_white_shadow.pngshadow.png"));
+                //copyResourceToFile(c, R.raw.logo_baxy_white, new File("/sdcard/BAXY/logos/logo_baxy_white.png"));
+                //copyResourceToFile(c, R.raw.logo_ouya_black, new File("/sdcard/BAXY/logos/logo_ouya_black.png"));
+                //copyResourceToFile(c, R.raw.logo_ouya_red, new File("/sdcard/BAXY/logos/logo_ouya_red.png"));
+                //copyResourceToFile(c, R.raw.logo_ouya_white, new File("/sdcard/BAXY/logos/logo_ouya_white.png"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -199,12 +199,12 @@ public class Util {
 
         //Check preference
         SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(c);
-        String fileString = defaultSharedPreferences.getString("logoFile", "/sdcard/FrankkieOuyaLauncher/logos/logo_default.png");
+        String fileString = defaultSharedPreferences.getString("logoFile", "/sdcard/BAXY/logos/logo_default.png");
         File file = new File(fileString);
         if (!file.exists()) {
             //The selected custom background does not exist..
             //Return Default !
-            Log.e("FrankkieOuyaLauncher", "Selected Logo does not exist !! (return default)");
+            Log.e("BAXY", "Selected Logo does not exist !! (return default)");
             return c.getResources().getDrawable(R.drawable.logo_default_old);
         }
         //File does exist

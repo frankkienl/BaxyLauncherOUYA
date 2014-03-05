@@ -16,14 +16,14 @@ public class WebUtil {
             "\t\t<title>BAXY REMOTE</title>\n" +
             "\n" +
             "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css\" />\n" +
-            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/FrankkieOuyaLauncher/web/css/layout.css\" />\n" +
-            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/FrankkieOuyaLauncher/web/css/mmenu.css\" />\n" +
-            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/FrankkieOuyaLauncher/web/css/mmenu-sizing-large.css\" />\n" +
-            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/FrankkieOuyaLauncher/web/css/mmenu-widescreen.css\" media=\"all and (min-width: 900px)\" />\n" +
-            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/FrankkieOuyaLauncher/web/css/mmenu-iconbar.css\" media=\"all and (min-width: 500px) and (max-width: 899px)\" />\n" +
+            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/BAXY/web/css/layout.css\" />\n" +
+            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/BAXY/web/css/mmenu.css\" />\n" +
+            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/BAXY/web/css/mmenu-sizing-large.css\" />\n" +
+            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/BAXY/web/css/mmenu-widescreen.css\" media=\"all and (min-width: 900px)\" />\n" +
+            "\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"/files/BAXY/web/css/mmenu-iconbar.css\" media=\"all and (min-width: 500px) and (max-width: 899px)\" />\n" +
             "\n" +
-            "\t\t<script type=\"text/javascript\" src=\"/files/FrankkieOuyaLauncher/web/js/jquery.min.js\"></script>\n" +
-            "\t\t<script type=\"text/javascript\" src=\"/files/FrankkieOuyaLauncher/web/js/jquery.mmenu.min.js\"></script>\n" +
+            "\t\t<script type=\"text/javascript\" src=\"/files/BAXY/web/js/jquery.min.js\"></script>\n" +
+            "\t\t<script type=\"text/javascript\" src=\"/files/BAXY/web/js/jquery.mmenu.min.js\"></script>\n" +
             "\t\t<script type=\"text/javascript\">\n" +
             "\t\t\t$(function() {\n" +
             "\t\t\t\t$('#open-icon-menu a').click(function( e ) {\n" +

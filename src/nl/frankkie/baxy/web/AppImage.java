@@ -41,7 +41,7 @@ public class AppImage extends WebPage {
         info.OnLoad();
         File f;
         if (info.isOUYA()) { //so it should have a thumbnail
-            f = new File("/sdcard/FrankkieOuyaLauncher/thumbnails/" + packageName + ".png");
+            f = new File("/sdcard/BAXY/thumbnails/" + packageName + ".png");
             if (!f.exists()) {
                 return new NanoHTTPD.Response(NanoHTTPD.Response.Status.NOT_FOUND, "text/html", "Image not found !");
             }

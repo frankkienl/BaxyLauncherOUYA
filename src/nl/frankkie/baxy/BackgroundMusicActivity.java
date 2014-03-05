@@ -58,13 +58,13 @@ public class BackgroundMusicActivity extends Activity {
     }
 
     public void initMusic(){
-        File defaultFile = new File("/sdcard/FrankkieOuyaLauncher/music/music_default.mp3");
+        File defaultFile = new File("/sdcard/BAXY/music/music_default.mp3");
         if (!defaultFile.exists()){
-            File musicFolder = new File("/sdcard/FrankkieOuyaLauncher/music/");
+            File musicFolder = new File("/sdcard/BAXY/music/");
             musicFolder.mkdirs();
             try {
                 //add .nomedia
-                File noMedia = new File("/sdcard/FrankkieOuyaLauncher/music/.nomedia");
+                File noMedia = new File("/sdcard/BAXY/music/.nomedia");
                 noMedia.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -139,7 +139,7 @@ public class BackgroundMusicActivity extends Activity {
 
                 // download the file
                 InputStream input = new BufferedInputStream(url.openStream());
-                OutputStream output = new FileOutputStream("/sdcard/FrankkieOuyaLauncher/music/music_default.mp3");
+                OutputStream output = new FileOutputStream("/sdcard/BAXY/music/music_default.mp3");
 
                 byte data[] = new byte[1024];
                 long total = 0;
@@ -181,11 +181,11 @@ public class BackgroundMusicActivity extends Activity {
     public class MusicsLoaderAsyncTask extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... voids) {
-            File dir = new File("/sdcard/FrankkieOuyaLauncher/music/");
+            File dir = new File("/sdcard/BAXY/music/");
             String[] list = dir.list();
             musics.clear();
             SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(BackgroundMusicActivity.this);
-            String selectedBackgroundPath = defaultSharedPreferences.getString(Util.PREFS_MUSIC_FILE, "/sdcard/FrankkieOuyaLauncher/music/music_default.png");
+            String selectedBackgroundPath = defaultSharedPreferences.getString(Util.PREFS_MUSIC_FILE, "/sdcard/BAXY/music/music_default.png");
             //add silence
             MyMusic musicOff = new MyMusic();
             musicOff.name = "Music Off";
@@ -197,7 +197,7 @@ public class BackgroundMusicActivity extends Activity {
                     continue;
                 }
                 MyMusic myMusic = new MyMusic();
-                File file = new File("/sdcard/FrankkieOuyaLauncher/music/" + s);
+                File file = new File("/sdcard/BAXY/music/" + s);
                 if (!file.exists() || !file.canRead()) {
                     continue;
                 }

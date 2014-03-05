@@ -43,7 +43,7 @@
                         android:textColor="#FFF"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="Please put music files in: /sdcard/FrankkieOuyaLauncher/music/"
+                        android:text="Please put music files in: /sdcard/BAXY/music/"
                         />
             </LinearLayout>
 

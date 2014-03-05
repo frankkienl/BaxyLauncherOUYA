@@ -34,21 +34,21 @@ public class MakeImageCache extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... voids) {
         //Make folder
-        File thumbnailsFolder = new File("/sdcard/FrankkieOuyaLauncher/thumbnails/");
+        File thumbnailsFolder = new File("/sdcard/BAXY/thumbnails/");
         thumbnailsFolder.mkdirs();
         try {
             //add .nomedia
-            File noMedia = new File("/sdcard/FrankkieOuyaLauncher/thumbnails/.nomedia");
+            File noMedia = new File("/sdcard/BAXY/thumbnails/.nomedia");
             noMedia.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
         //Make folder
-        File animationsFolder = new File("/sdcard/FrankkieOuyaLauncher/animations/");
+        File animationsFolder = new File("/sdcard/BAXY/animations/");
         animationsFolder.mkdirs();
         try {
             //add .nomedia
-            File noMedia = new File("/sdcard/FrankkieOuyaLauncher/animations/.nomedia");
+            File noMedia = new File("/sdcard/BAXY/animations/.nomedia");
             noMedia.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,7 +71,7 @@ public class MakeImageCache extends AsyncTask<Void, Void, Void> {
         for (ResolveInfo info : infos) {
             packageName = info.activityInfo.applicationInfo.packageName;
             //Check if image thumbnail for this package already exists.
-            File thumbFile = new File("/sdcard/FrankkieOuyaLauncher/thumbnails/" + packageName + ".png");
+            File thumbFile = new File("/sdcard/BAXY/thumbnails/" + packageName + ".png");
             if (!thumbFile.exists()) {
                 //make
                 try {
@@ -95,7 +95,7 @@ public class MakeImageCache extends AsyncTask<Void, Void, Void> {
                     // Scale it //http://stackoverflow.com/questions/4609456/android-set-drawable-size-programatically
                     BitmapDrawable d = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, Util.THUMBNAIL_SMALL_WIDTH, Util.THUMBNAIL_SMALL_HEIGHT, true));
                     //Save to file //http://stackoverflow.com/questions/649154/save-bitmap-to-location
-                    FileOutputStream out = new FileOutputStream("/sdcard/FrankkieOuyaLauncher/thumbnails/" + packageName + ".png");
+                    FileOutputStream out = new FileOutputStream("/sdcard/BAXY/thumbnails/" + packageName + ".png");
                     d.getBitmap().compress(Bitmap.CompressFormat.PNG, 90, out);
                     Runtime.getRuntime().gc(); //important
                 } catch (PackageManager.NameNotFoundException e) {
@@ -107,7 +107,7 @@ public class MakeImageCache extends AsyncTask<Void, Void, Void> {
                 }
             }
             //Animation
-            File animationFile = new File("/sdcard/FrankkieOuyaLauncher/animations/" + packageName + ".gif");
+            File animationFile = new File("/sdcard/BAXY/animations/" + packageName + ".gif");
             if (!animationFile.exists()) {
                 try {
                     resources = packageManager.getResourcesForApplication(info.activityInfo.applicationInfo);
@@ -115,7 +115,7 @@ public class MakeImageCache extends AsyncTask<Void, Void, Void> {
                     if (identifier != 0) {
                         InputStream in = resources.openRawResource(identifier);
                         //Save to file //http://stackoverflow.com/questions/649154/save-bitmap-to-location
-                        FileOutputStream out = new FileOutputStream("/sdcard/FrankkieOuyaLauncher/animations/" + packageName + ".gif");
+                        FileOutputStream out = new FileOutputStream("/sdcard/BAXY/animations/" + packageName + ".gif");
                         byte[] buff = new byte[1024];
                         int read = 0;
                         try {

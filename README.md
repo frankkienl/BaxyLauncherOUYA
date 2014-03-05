@@ -1,4 +1,4 @@
-Abandonware
+Abandonware, yes it still is Abandonware. 1 update does not mean re-opend.
 
 
 Alternative OUYA Launcher by FrankkieNL
@@ -9,14 +9,14 @@ The name of this Launcher: BAXY !
 ![Logo](https://raw.github.com/frankkienl/OuyaLauncherFrankkieNL/master/FrankkieOuyaLauncher/src/main/res/drawable/logo_default.png "Logo")
 
 
-Download APK: https://raw.github.com/frankkienl/OuyaLauncherFrankkieNL/master/FrankkieOuyaLauncher/FrankkieOuyaLauncher.apk
+Download APK: https://raw.github.com/frankkienl/BaxyLauncherOUYA/master/BaxyLauncherOUYA-release.apk
 
 Official Forum Thread:   
 http://ouyaforum.com/showthread.php?4436-BAXY-Custom-Launcher
 
 
 Want your normal OUYA Launcher back? Just uninstall this app.
-Go to Advanced Settings, Apps, FrankkieOuyaLauncher, click Uninstall
+Go to Advanced Settings, Apps, Baxy Launcher for OUYA, click Uninstall
 
 Note: you must install SuperUser or SuperSu to turn off the console via this Launcher.
 (Or just press the power button, or open the stock launcher)

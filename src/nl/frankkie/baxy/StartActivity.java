@@ -91,6 +91,16 @@ public class StartActivity extends Activity {
         context = this;
         startImageCaching();
         initWidgets();
+
+        boolean autoStartFavorites = false;
+        if (autoStartFavorites) {
+            //Do same behaviour as when the favorites-button is pressed.
+            Intent i = new Intent();
+            i.setClass(StartActivity.this, MainActivity.class);
+            i.putExtra("type", MainActivity.APP_FAVORITES_ONLY);
+            Util.logGoToApplist(StartActivity.this, MainActivity.APP_FAVORITES_ONLY);
+            startActivity(i);
+        }
     }
 
     private void initWidgets() {
